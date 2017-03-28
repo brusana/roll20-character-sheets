@@ -2405,31 +2405,27 @@
 					<!--spells-->
 					<td colspan="3">
 						<table style="width:100%;" class="sheet-table-row" cellpadding="0" cellspacing="0">
-							<tr>
-								<td colspan="3" class="sheet-statlabel-big-gray" style="width: 790px; height: 35px; font-size: 1.5em;" data-i18n="spells">Spells</td>
-							</tr>
 							<tr> 
-								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="caster-level">Caster Level</span>:<br>
-									<input type="text" style="width: 25px;" name="attr_casterlevel" title="casterlevel" value="1" class="sheet-table-row-small">/
-									<input type="text" style="width: 25px;" name="attr_casterlevel2" title="casterlevel2" value="0" class="sheet-table-row-small">
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="arcane-caster-level">Arcane Caster Level</span>:<br>
+									<input type="text" style="width: 25px;" name="attr_casterlevel" title="casterlevel" value="1" class="sheet-table-row-small">
 								</td>
-								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="spells-per-day">Spells/Day</span>:<br>
-									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_spells0" title="spells0" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_spells1" title="spells1" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_spells2" title="spells2" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_spells3" title="spells3" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_spells4" title="spells4" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_spells5" title="spells5" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_spells6" title="spells6" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_spells7" title="spells7" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_spells8" title="spells8" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_spells9" title="spells9" value="0" class="sheet-table-row-small">
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="arcane-spells-per-day">Arcane Spells/Day</span>:<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_aspells0" title="aspells0" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_aspells1" title="aspells1" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_aspells2" title="aspells2" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_aspells3" title="aspells3" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_aspells4" title="aspells4" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_aspells5" title="aspells5" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_aspells6" title="aspells6" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_aspells7" title="aspells7" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_aspells8" title="aspells8" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_aspells9" title="aspells9" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 								</td>
 							</tr>
 							<tr> 
-								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="casting-ability">Casting Ability</span>:<br>
-									<select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat" title="spellcastingstat">
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="arcane-casting-ability">Arcane Casting Ability</span>:<br>
+									<select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat1" title="spellcastingstat1">
 										<option type="text" style="width: 45px;" value="@{str-mod} " data-i18n="strength-a" >Str</option>
 										<option type="text" style="width: 45px;" value="@{dex-mod} " data-i18n="dexterity-a" >Dex</option>
 										<option type="text" style="width: 45px;" value="@{con-mod} " data-i18n="constitution-a" >Con</option>
@@ -2438,17 +2434,60 @@
 										<option type="text" style="width: 45px;" value="@{cha-mod} " data-i18n="charisma-a">Cha</option>
 									</select>
 								</td>
-								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="spell-difficulty-classes">Spell DC's</span><br>
-									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_spelldc0" title="spelldc0" value="(10+0+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_spelldc1" title="spelldc1" value="(10+1+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_spelldc2" title="spelldc2" value="(10+2+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_spelldc3" title="spelldc3" value="(10+3+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_spelldc4" title="spelldc4" value="(10+4+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_spelldc5" title="spelldc5" value="(10+5+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_spelldc6" title="spelldc6" value="(10+6+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_spelldc7" title="spelldc7" value="(10+7+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_spelldc8" title="spelldc8" value="(10+8+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_spelldc9" title="spelldc9" value="(10+9+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="arcane-spell-difficulty-classes">Arcane Spell DC's</span><br>
+									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_aspellsdc0" title="aspellsdc0" value="(10+0+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_aspellsdc1" title="aspellsdc1" value="(10+1+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_aspellsdc2" title="aspellsdc2" value="(10+2+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_aspellsdc3" title="aspellsdc3" value="(10+3+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_aspellsdc4" title="aspellsdc4" value="(10+4+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_aspellsdc5" title="aspellsdc5" value="(10+5+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_aspellsdc6" title="aspellsdc6" value="(10+6+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_aspellsdc7" title="aspellsdc7" value="(10+7+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_aspellsdc8" title="aspellsdc8" value="(10+8+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_aspellsdc9" title="aspellsdc9" value="(10+9+@{spellcastingstat1})" disabled="true" class="sheet-table-row-small">
+									 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+								</td>
+							</tr>
+							<tr> 
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="divine-caster-level">Divine Caster Level</span>:<br>
+									<input type="text" style="width: 25px;" name="attr_casterlevel" title="casterlevel2" value="0" class="sheet-table-row-small">
+								</td>
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="divine-spells-per-day">Divine Spells/Day</span>:<br>
+									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_dspells0" title="dspells0" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_dspells1" title="dspells1" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_dspells2" title="dspells2" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_dspells3" title="dspells3" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_dspells4" title="dspells4" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_dspells5" title="dspells5" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_dspells6" title="dspells6" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_dspells7" title="dspells7" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_dspells8" title="dspells8" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_dspells9" title="dspells9" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+								</td>
+							</tr>
+							<tr> 
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><span data-i18n="divine-casting-ability">Divine Casting Ability</span>:<br>
+									<select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat2" title="spellcastingstat2">
+										<option type="text" style="width: 45px;" value="@{str-mod} " data-i18n="strength-a" >Str</option>
+										<option type="text" style="width: 45px;" value="@{dex-mod} " data-i18n="dexterity-a" >Dex</option>
+										<option type="text" style="width: 45px;" value="@{con-mod} " data-i18n="constitution-a" >Con</option>
+										<option type="text" style="width: 45px;" value="@{int-mod} " data-i18n="intelligence-a" selected>Int</option>
+										<option type="text" style="width: 45px;" value="@{wis-mod} " data-i18n="wisdom-a">Wis</option>
+										<option type="text" style="width: 45px;" value="@{cha-mod} " data-i18n="charisma-a">Cha</option>
+									</select>
+								</td>
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;"><span data-i18n="divine-spell-difficulty-classes">Divine Spell DC's</span><br>
+									&nbsp; &nbsp; &nbsp; &nbsp; <span data-i18n="zero">0</span>:<input type="text" name="attr_dspelldc0" title="dspelldc0" value="(10+0+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="first">1st</span>:<input type="text" name="attr_dspelldc1" title="dspelldc1" value="(10+1+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="second">2nd</span>:<input type="text" name="attr_dspelldc2" title="dspelldc2" value="(10+2+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="third">3rd</span>:<input type="text" name="attr_dspelldc3" title="dspelldc3" value="(10+3+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fourth">4th</span>:<input type="text" name="attr_dspelldc4" title="dspelldc4" value="(10+4+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="fifth">5th</span>:<input type="text" name="attr_dspelldc5" title="dspelldc5" value="(10+5+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="sixth">6th</span>:<input type="text" name="attr_dspelldc6" title="dspelldc6" value="(10+6+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="seventh">7th</span>:<input type="text" name="attr_dspelldc7" title="dspelldc7" value="(10+7+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="eighth">8th</span>:<input type="text" name="attr_dspelldc8" title="dspelldc8" value="(10+8+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; <span data-i18n="ninth">9th</span>:<input type="text" name="attr_dspelldc9" title="dspelldc9" value="(10+9+@{spellcastingstat2})" disabled="true" class="sheet-table-row-small">
 									 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 								</td>
 							</tr>

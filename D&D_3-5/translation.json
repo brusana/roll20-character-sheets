@@ -405,5 +405,13 @@
 	"extra-attack": "Extra Attack",
 	"half-dexterity-a": "1/2 Dex",
 	"cmd": "CMD",
-	"cmdmisc": "CMD Misc"
+	"cmdmisc": "CMD Misc",
+	"arcane-casting-ability": "Arcane Casting Ability",
+	"divine-casting-ability": "Divine Casting Ability",
+	"arcane-caster-level": "Arcane Caster Level",
+	"divine-caster-level": "Divine Caster Level",
+	"arcane-spells-per-day": "Arcane Spells/Day",
+	"divine-spells-per-day": "Divine Spells/Day",
+	"divine-spell-difficulty-classes": "Divine Spell DC's",
+	"arcane-spell-difficulty-classes": "Arcane Spell DC's"
 }

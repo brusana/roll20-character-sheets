@@ -413,5 +413,7 @@
 	"arcane-spells-per-day": "Arcane Spells/Day",
 	"divine-spells-per-day": "Divine Spells/Day",
 	"divine-spell-difficulty-classes": "Divine Spell DC's",
-	"arcane-spell-difficulty-classes": "Arcane Spell DC's"
+	"arcane-spell-difficulty-classes": "Arcane Spell DC's",
+	"aspells": "A.Spells",
+	"dspells": "D.Spells"
 }

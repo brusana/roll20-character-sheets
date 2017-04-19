@@ -574,51 +574,6 @@
 												<td class="sheet-statlabel" style="width: 44px;" data-i18n="weapon-enhancement-a" >Weapon Enh</td>
 												<td class="sheet-statlabel" style="width: 41px;" data-i18n="weapon-focus-s" >Weapon<br>Focus</td>
 												<td class="sheet-statlabel" style="width: 41px;" data-i18n="weapon-specialization-as" >Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 41px;" data-i18n="damage-dice-as" >Damage<br>Dice</td>
-												<td class="sheet-statlabel" style="width: 79px;" data-i18n="critical" >Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;" data-i18n="range" >Range</td>
-												<td class="sheet-statlabel" style="width: 59px;" data-i18n="ammunition" >Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;" data-i18n="attack-ability" >Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;" data-i18n="damage-ability" >Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;" data-i18n="special-properties" >Special Properties</td>
-											</tr>
-											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon2name" title="weapon2name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2enh" title="weapon2enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2focus" title="weapon2focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2specialize" title="weapon2specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2dmgdice" title="weapon2dmgdice" style="height: 24px; width: 44px;" value="d6"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2critmin" title="weapon2critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon2critmult" title="weapon2critmult" style="height: 24px; width: 19px;" value="2"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2range" title="weapon2range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2ammunition" title="weapon2ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon2stat" title="weapon2stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " data-i18n="strength-a" selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} " data-i18n="dexterity-a" >Dex</option>
-												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon2damagestat" title="weapon2damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " data-i18n="strength-a" selected>Str</option>
-													<option type="text" style="width: 45px;" value="(floor(@{str-mod}/2))" data-i18n="half-strength" >1/2 Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))" data-i18n="strength-and-half-strength" >Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} " data-i18n="dexterity-a" >Dex</option>
-													<option type="text" style="width: 45px;" value="0" data-i18n="none" >None</option>
-												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon2specialproperties" title="weapon2specialproperties">0</textarea></td>
-											</tr>
-											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;"><span data-i18n="attack-calculation-a">Attack Calc</span> / <span data-i18n="macro">Macro</span>:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon2attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon2attackcalc">1d20cs>@{weapon2critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] + @{weapon2stat}[Ability] +@{size}[size] +@{weapon2enh}[Weapon Enh] +@{weapon2focus}[Weapon Focus] -?{Power Attack? |0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Misc. Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon2attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon2attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon2name} }} {{attack1= [[ @{weapon2attackcalc} ]] }} {{critconfirm1=Crit?: [[ @{weapon2attackcalc} ]] }} {{damage1=for [[ @{weapon2damage} ]]}} {{critdmg1=+ [[ @{weapon2crit} ]]}}</textarea>
-												<button type="roll" name="attr_weapon2attack" text="attack" title="weapon2attack" value="@{weapon2attackmacro}" style="width: 20px;" > </button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;"><span data-i18n="full-attack-macro" >Full Attack Macro</span>:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon2fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon2fullattackmacro">&{template:DnD35Attack} {{name=@{character_name}}} {{subtags=swings a @{weapon2name} }} {{pcflag=true}} {{fullattackflag= [[?{Full Attack?|Yes, d1|No, 0d1} ]] }} {{hasteattackflag= [[?{Haste Attack?|No, 0d1|Yes, d1} ]] }} {{attack1=A1: [[ @{weapon2attackcalc} ]] }} {{critconfirm1=Crit!: [[ @{weapon2attackcalc} ]] }} {{damage1=D1: [[ @{weapon2damage} ]] }} {{critdmg1=+ [[ @{weapon2crit} ]] }} {{attack2=HA: [[ @{weapon2attackcalc} ]] }} {{critconfirm2=Crit!: [[ @{weapon2attackcalc} ]] }} {{damage2=HD: [[ @{weapon2damage} ]] }} {{critdmg2=+ [[ @{weapon2crit} ]] }} {{attack3=A2: [[ @{weapon2attackcalc}-5 ]] }} {{critconfirm3=Crit!: [[ @{weapon2attackcalc}-5 ]] }} {{damage3=D2: [[ @{weapon2damage} ]] }} {{critdmg3=+ [[ @{weapon2crit} ]] }} {{attack4=A3: [[ @{weapon2attackcalc}-10 ]] }} {{critconfirm4=Crit!: [[ @{weapon2attackcalc}-10 ]] }} {{damage4=D3: [[ @{weapon2damage} ]] }} {{critdmg4=+ [[ @{weapon2crit} ]] }} {{attack5=A4: [[ @{weapon2attackcalc}-15 ]] }} {{critconfirm5=Crit!: [[ @{weapon2attackcalc}-15 ]] }} {{damage5=D4: [[ @{weapon2damage} ]] }} {{critdmg5=+ [[ @{weapon2crit} ]] }} </textarea>
-													<button type="roll"name="attr_weapon2fullattack" text="Full Attack" title="weapon2fullattack" value="@{weapon2fullattackmacro}" style="width: 20px;" > </button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;"><span data-i18n="damage-calculation-a">Damage Calc</span> / <span data-i18n="critical-calculation-a">Crit Calc</span> / <span data-i18n="damage-macro">Damage Macro</span>:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon2damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon2damage (Edit this to adjust the damage calculation.)">@{weapon2dmgdice} + @{weapon2damagestat}[Ability] +@{weapon2enh}[ Enh] +@{weapon2specialize}[Weapon Spec] +[[2*?{Power Attack? |0}]][Pwr Attk] +?{Additional Damage Bonus?|0}[Misc. Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon2crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon2crit (Edit this to adjust the critical calculation.)"> [[ (@{weapon2critmult}-1) ]]@{weapon2dmgdice} + [[[[ (@{weapon2critmult}-1) ]] *( @{weapon2damagestat})]][Ability] +[[[[ (@{weapon2critmult}-1) ]] *(@{weapon2enh})]][Weapon Enh] +[[[[ (@{weapon2critmult}-1) ]] *(@{weapon2specialize})]][Weapon Spec] +[[[[ (@{weapon2critmult}-1) ]] *2*(?{Power Attack? |0})]][Pwr Attk] +[[[[ (@{weapon2critmult}-1) ]] *(?{Additional Damage Bonus?|0})]][Misc Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon2damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon2damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon2name} }} {{damage1=does [[ @{weapon2damage} ]]damage}} {{fullattackflag= [[ 0d1 ]] }}</textarea>
-												<button type="roll" name="attr_weapon2damageroll" title="weapon2damageroll" style="width: 20px;" value="@{weapon2damagemacro}"></button></td>
-											</tr><tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;" data-i18n="weapon" >Weapon</td>
-												<td class="sheet-statlabel" style="width: 44px;" data-i18n="weapon-enhancement-a" >Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;" data-i18n="weapon-focus-s" >Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;" data-i18n="weapon-specialization-as" >Weapon<br>Specialize</td>
 												<td class="sheet-statlabel" style="width: 60px;" data-i18n="damage-dice-as" >Damage<br>Dice</td>
 												<td class="sheet-statlabel" style="width: 79px;" data-i18n="critical" >Critical</td>
 												<td class="sheet-statlabel" style="width: 59px;" data-i18n="range" >Range</td>

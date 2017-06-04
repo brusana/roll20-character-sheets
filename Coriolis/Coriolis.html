@@ -95,7 +95,7 @@ Weapon roll work in progress
                             <h4 data-i18n="strength">Styrka</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{strength}}} {{roll=[[@{sty}d6>6]]}}' name='roll_strength'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{strength}}} {{roll=[[[[?{Bonus?|0}+@{sty}]]d6>6]]}}' name='roll_strength'></button>
                             <input type="number" name="attr_sty" value="0">
                         </td>
                     </tr>
@@ -104,7 +104,7 @@ Weapon roll work in progress
                             <h4 data-i18n="agility">Kyla</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{agility}}} {{roll=[[@{kyl}d6>6]]}}' name='roll_agility'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{agility}}} {{roll=[[[[?{Bonus?|0}+@{kyl}]]d6>6]]}}' name='roll_agility'></button>
                             <input type="number" name="attr_kyl" value="0">
                         </td>
                     </tr>
@@ -113,7 +113,7 @@ Weapon roll work in progress
                             <h4 data-i18n="wits">Sk&auml;rpa</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{wits}}} {{roll=[[@{skp}d6>6]]}}' name='roll_wits'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{wits}}} {{roll=[[[[?{Bonus?|0}+@{skp}]]d6>6]]}}' name='roll_wits'></button>
                             <input type="number" name="attr_skp" value="0">
                         </td>
                     </tr>
@@ -122,7 +122,7 @@ Weapon roll work in progress
                             <h4 data-i18n="empathy">K&auml;nsla</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{empathy}}} {{roll=[[@{kns}d6>6]]}}' name='roll_empathy'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{empathy}}} {{roll=[[[[?{Bonus?|0}+@{kns}]]d6>6]]}}' name='roll_empathy'></button>
                             <input type="number" name="attr_kns" value="0">
                         </td>
                     </tr>
@@ -397,14 +397,14 @@ Weapon roll work in progress
                             <h4 data-i18n="force">Kraftprov (sty)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{force}}} {{roll=[[@{kraftprov}d6>6[^{force}]+@{sty}d6>6[^{strength}]]]}}' name='roll_force'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{force}}} {{roll=[[[[(@{kraftprov}[^{force}]+?{Bonus?|0}[Bonus]+@{sty}[^{strength}])]]d6>6]]}}' name='roll_force'></button>
                             <input type="number" name="attr_kraftprov" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="command">Bef&auml;l (kns)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{command}}} {{advanced=[[@{befal}>0]]}} {{roll=[[@{befal}d6>6[^{command}]+@{kns}d6>6[^{empathy}]]]}}' name='roll_command'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{command}}} {{advanced=[[@{befal}>0]]}} {{roll=[[[[(?{Bonus?|0}d6>6[Bonus]+@{befal}d6>6[^{command}]+@{kns}[^{empathy}])]]d6>6]]}}' name='roll_command'></button>
                             <input type="number" name="attr_befal" value="0">
                         </td>
                     </tr>
@@ -413,14 +413,14 @@ Weapon roll work in progress
                             <h4 data-i18n="manipulation">Manipulera (kns)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{manipulation}}} {{roll=[[@{manipulera}d6>6[^{manipulation}]+@{kns}d6>6[^{empathy}]]]}}' name='roll_manipulation'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{manipulation}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{manipulera}[^{manipulation}]+@{kns}[^{empathy}])]]d6>6]]}}' name='roll_manipulation'></button>
                             <input type="number" name="attr_manipulera" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="datadjinn"> Data Djinn (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{datadjinn}}} {{advanced=[[@{datadjinn}>0]]}} {{roll=[[@{datadjinn}d6>6[^{datadjinn}]+@{skp}d6>6[^{wits}]]]}}' name='roll_datadjinn'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{datadjinn}}} {{advanced=[[@{datadjinn}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{datadjinn}[^{datadjinn}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_datadjinn'></button>
                             <input type="number" name="attr_datadjinn" value="0">
                         </td>
                     </tr>
@@ -429,14 +429,14 @@ Weapon roll work in progress
                             <h4 data-i18n="melee-combat">N&auml;rkamp (sty)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{melee-combat}}} {{roll=[[@{narkamp}d6>6[^{melee-combat}]+@{sty}d6>6[^{strength}]]]}}' name='roll_melee-combat'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{melee-combat}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{narkamp}[^{melee-combat}]+@{sty}[^{strength}])]]d6>6]]}}' name='roll_melee-combat'></button>
                             <input type="number" name="attr_narkamp" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="culture">Horisontens kultur (kns)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{culture}}} {{advanced=[[@{horisontens_kultur}>0]]}} {{roll=[[@{horisontens_kultur}d6>6[^{culture}]+@{kns}d6>6[^{empathy}]]]}}' name='roll_culture'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{culture}}} {{advanced=[[@{horisontens_kultur}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{horisontens_kultur}[^{culture}]+@{kns}[^{empathy}])]]d6>6]]}}' name='roll_culture'></button>
                             <input type="number" name="attr_horisontens_kultur" value="0">
                         </td>
                     </tr>
@@ -445,14 +445,14 @@ Weapon roll work in progress
                             <h4 data-i18n="dexterity">R&ouml;rlighet (kyl)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{dexterity}}} {{roll=[[@{rorlighet}d6>6[^{dexterity}]+@{kyl}d6>6[^{agility}]]]}}' name='roll_dexterity'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{dexterity}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{rorlighet}[^{dexterity}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_dexterity'></button>
                             <input type="number" name="attr_rorlighet" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="medicurgy">Medikurgi (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{medicurgy}}} {{advanced=[[@{medikurgi}>0]]}} {{roll=[[@{medikurgi}d6>6[^{medicurgy}]+@{skp}d6>6[^{wits}]]]}}' name='roll_str'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{medicurgy}}} {{advanced=[[@{medikurgi}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{medikurgi}[^{medicurgy}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_str'></button>
                             <input type="number" name="attr_medikurgi" value="0">
                         </td>
                     </tr>
@@ -461,14 +461,14 @@ Weapon roll work in progress
                             <h4 data-i18n="ranged-combat">Skjutvapen (kyl)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{ranged-combat}}} {{roll=[[@{skjutvape}d6>6[^{ranged-combat}]+@{kyl}d6>6[^{agility}]]]}}' name='roll_ranged-combat'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{ranged-combat}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{skjutvape}[^{ranged-combat}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_ranged-combat'></button>
                             <input type="number" name="attr_skjutvape" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="mystic-powers">Mystiska Krafter (kns)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{mystic-powers}}} {{advanced=[[@{mystiska_krafter}>0]]}} {{roll=[[@{mystiska_krafter}d6>6[Mystic Powers]+@{kns}d6>6[^{empathy}]]]}}' name='roll_mystic-powers'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{mystic-powers}}} {{advanced=[[@{mystiska_krafter}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{mystiska_krafter}[Mystic Powers]+@{kns}[^{empathy}])]]d6>6]]}}' name='roll_mystic-powers'></button>
                             <input type="number" name="attr_mystiska_krafter" value="0">
                         </td>
                     </tr>
@@ -477,14 +477,14 @@ Weapon roll work in progress
                             <h4 data-i18n="infiltration">Smyga (kyl)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{infiltration}}} {{roll=[[@{smyga}d6>6[^{infiltration}]+@{kyl}d6>6[^{agility}]]]}}' name='roll_infiltration'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{infiltration}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{smyga}[^{infiltration}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_infiltration'></button>
                             <input type="number" name="attr_smyga" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="skill-pilot">Pilot (kyl)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{skill-pilot}}} {{advanced=[[@{pilot}>0]]}} {{roll=[[@{pilot}d6>6[^{skill-pilot}]+@{kyl}d6>6[^{agility}]]]}}' name='roll_skill-pilot'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{skill-pilot}}} {{advanced=[[@{pilot}>0]]}} {{roll=[[(?[[{Bonus?|0}[Bonus]+@{pilot}[^{skill-pilot}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_skill-pilot'></button>
                             <input type="number" name="attr_pilot" value="0">
                         </td>
                     </tr>
@@ -493,14 +493,14 @@ Weapon roll work in progress
                             <h4 data-i18n="observation">Spaning (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{observation}}} {{roll=[[@{spaning}d6>6[^{observation}]+@{skp}d6>6[^{wits}]]]}}' name='roll_observation'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{observation}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{spaning}[^{observation}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_observation'></button>
                             <input type="number" name="attr_spaning" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="technology">Teknologi (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{technology}}} {{advanced=[[@{teknologi}>0]]}} {{roll=[[@{teknologi}d6>6[^{technology}]+@{skp}d6>6[^{wits}]]]}}' name='roll_technology'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{technology}}} {{advanced=[[@{teknologi}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{teknologi}[^{technology}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_technology'></button>
                             <input type="number" name="attr_teknologi" value="0">
                         </td>
                     </tr>
@@ -509,15 +509,18 @@ Weapon roll work in progress
                             <h4 data-i18n="survival">&Ouml;verlevnad (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{survival}}} {{roll=[[@{overlevnad}d6>6[^{survival}]+@{skp}d6>6[^{wits}]]]}}' name='roll_survival'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{survival}}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{overlevnad}[^{survival}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_survival'></button>
                             <input type="number" name="attr_overlevnad" value="0">
                         </td>
                         <td>
                             <h4 data-i18n="science">Vetenskap (skp)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{science}}} {{advanced=[[@{vetenskap}>0]]}} {{roll=[[@{vetenskap}d6>6[^{science}]+@{skp}d6>6[^{wits}]]]}}' name='roll_science'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{science}}} {{advanced=[[@{vetenskap}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{vetenskap}[^{science}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_science'></button>
                             <input type="number" name="attr_vetenskap" value="0">
+                        </td>
+						<td class="sheet-value">
+                            <button type='roll' value='&{template:coriolis} {{name=Reroll}} {{roll=[[?{Push|0}d6>6]]}}' name='roll_push'></button> 
                         </td>
                     </tr>
                 </table>

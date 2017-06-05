@@ -484,7 +484,7 @@ Weapon roll work in progress
                             <h4 data-i18n="skill-pilot">Pilot (kyl)</h4>
                         </td>
                         <td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=^{skill-pilot}}} {{advanced=[[@{pilot}>0]]}} {{roll=[[(?[[{Bonus?|0}[Bonus]+@{pilot}[^{skill-pilot}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_skill-pilot'></button>
+                            <button type='roll' value='&{template:coriolis} {{name=^{skill-pilot}}} {{advanced=[[@{pilot}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{pilot}[^{skill-pilot}]+@{kyl}[^{agility}])]]d6>6]]}}' name='roll_skill-pilot'></button>
                             <input type="number" name="attr_pilot" value="0">
                         </td>
                     </tr>
@@ -518,9 +518,6 @@ Weapon roll work in progress
                         <td class="sheet-value">
                             <button type='roll' value='&{template:coriolis} {{name=^{science}}} {{advanced=[[@{vetenskap}>0]]}} {{roll=[[[[(?{Bonus?|0}[Bonus]+@{vetenskap}[^{science}]+@{skp}[^{wits}])]]d6>6]]}}' name='roll_science'></button>
                             <input type="number" name="attr_vetenskap" value="0">
-                        </td>
-						<td class="sheet-value">
-                            <button type='roll' value='&{template:coriolis} {{name=Reroll}} {{roll=[[?{Push|0}d6>6]]}}' name='roll_push'></button> 
                         </td>
                     </tr>
                 </table>
